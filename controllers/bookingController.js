@@ -50,10 +50,30 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 });
 
 const createBookingCheckout = async (session) => {
-  const tour = session.client_reference_id;
-  const user = (await User.findOne({ email: session.customer_email })).id;
-  const price = session.display_items[0].amount / 100;
-  await Booking.create({ tour, user, price });
+  try {
+    if (
+      !session ||
+      !session.client_reference_id ||
+      !session.customer_email ||
+      !session.display_items ||
+      session.display_items.length === 0
+    ) {
+      throw new Error('Invalid session data');
+    }
+
+    const tour = session.client_reference_id;
+    const user = (await User.findOne({ email: session.customer_email })).id;
+
+    // Extract price from the session's display_items array
+    const price = session.display_items[0].amount / 100; // Assuming only one item in display_items array
+
+    // Create a booking with the retrieved information
+    await Booking.create({ tour, user, price });
+  } catch (error) {
+    console.error('Error creating booking:', error);
+    // Handle error, throw, or perform appropriate actions
+    // For example, you might want to send an error response or log it
+  }
 };
 
 exports.webhookCheckout = (req, res, next) => {
