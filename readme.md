@@ -145,4 +145,4 @@ For API handling/testing, use Postman.
 
 Explore the Natours app in action:
 
-[**Natours App Demo**]()
+[**Natours App Demo**](https://natours-amr-0f1949aec7fe.herokuapp.com/)
