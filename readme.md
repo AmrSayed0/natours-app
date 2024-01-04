@@ -37,7 +37,7 @@ Here are the key aspects covered in the Natours app:
 - JSON Web Token
 - bcrypt
 - Nodemailer
-- Gmail
+- Mailgun
 
 ## Features ✨
 
