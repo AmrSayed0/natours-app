@@ -138,7 +138,7 @@ Natours API supports the following query operators:
 
 For API handling/testing, use Postman.
 
-- Postman collection/documentation is available on this link [click here]()
+- Postman collection/documentation is available on this link [click here](https://documenter.getpostman.com/view/31067324/2s9Ykrcfy3)
 - Base URL endpoints: `http://127.0.0.1:3000/api/V1/` or `http://localhost:3000/api/v1/`
 
 ## Project Demo 🎬
