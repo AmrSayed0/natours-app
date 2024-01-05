@@ -8,7 +8,7 @@
   
 ## Introduction 🌟
 
-Welcome to Natours, a full stack web application designed for travel enthusiasts! This app was developed under the guidance of Jonas Schmedtmann's Node.js course, incorporating features like API creation, MVC architecture, user authentication, data modeling, file uploading, real-time map integration using Mapbox, and much more.
+Welcome to Natours, where the thrill of travel meets the convenience of technology! Unleash your wanderlust with our dynamic web application designed to ignite your imagination and simplify your journey planning.
 
 ## Key Aspects Covered 🚀
 
